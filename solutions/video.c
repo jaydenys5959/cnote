@@ -17,7 +17,7 @@ int main() {
     // title, qty 입력받고 변수에 저장.
     struct VideoInfo v; // 위의 값으로 구입한 비디오 생성
     v.title = ""; //assign title variable
-    v.qty = 2; // assign qty variable
+    v.qty = 2; // assign qty variable   
     
     // 구입 기능
     add_item(/* videoList pointer*/ v, videoCount); 
