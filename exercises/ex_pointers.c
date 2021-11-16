@@ -29,3 +29,70 @@ The length of the given string hello7:
 4. 위 함수를 호출하는 main함수를 작성하시오.
 */
 
+#include <stdio.h>
+void reverseString(){
+   char str1[50];
+   char revstr[50];
+   char *stptr = str1;
+   char *rvptr = revstr;
+   int i=-1;
+ 	printf("\n\n Print a string in reverse order :\n"); 
+	printf("------------------------------------------------\n");	
+   printf(" Input a string : ");
+   scanf("%s",str1);
+   while(*stptr)
+   {
+   printf("log: %p", *stptr); //logging
+   stptr++;
+   i++;
+   }
+   while(i>=0)
+   {
+   stptr--;
+   *rvptr = *stptr;
+   rvptr++;
+   --i;
+   }
+   *rvptr='\0';
+   printf(" Reverse of the string is : %s\n\n",revstr);
+
+}
+void sumArr(){
+     int arr1[10];
+   int i,n, sum = 0;
+   int *pt;
+   
+ 	printf("\n\n Pointer : Sum of all elements in an array :\n"); 
+	printf("------------------------------------------------\n"); 
+	
+   printf(" Input the number of elements to store in the array (max 10) : ");
+   scanf("%d",&n);
+   
+   printf(" Input %d number of elements in the array : \n",n);
+   for(i=0;i<n;i++)
+      {
+	  printf(" element - %d : ",i+1);
+	  scanf("%d",&arr1[i]);
+	  } 	
+
+   pt = arr1; // pt store the base address of array arr1
+ 
+   for (i = 0; i < n; i++) {
+      sum = sum + *pt;
+      pt++;
+   }
+ 
+   printf(" The sum of array is : %d\n\n", sum);
+}
+
+ 
+
+
+ 
+int main()
+{
+   reverseString();
+   sumArr();
+   
+    return 0;
+}
