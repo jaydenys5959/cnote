@@ -1,9 +1,10 @@
+#include <stdio.h>
 int main() {
   char str[20], *pt;
   int i = 0;
-  printf("Pointer Example Program : Find or Calculate Length of String \n");
-  printf("Enter Any string [below 20 chars] : ");
-  gets(str);
+  printf("Pointer Example: Length of String \n");
+  printf("Enter a string [max: 20] : ");
+  gets(str); // reads a line
   pt = str;
   while (*pt != '\0') {
     i++;
